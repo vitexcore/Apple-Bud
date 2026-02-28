@@ -1,64 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orders</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
 
-<div class="header">
-    <div class="top-bar">
-        <span class="back">&#8592;</span>
-        <h1>Orders</h1>
-        <div class="profile"></div>
-    </div>
-</div>
+body{
+    background:#f2f2f2;
+}
 
-<div class="container">
+/* MOBILE STYLE */
+@media screen and (max-width:480px){
 
-    <div class="card">
-        <img src="fert1.png" alt="">
-        <div class="details">
-            <h3>Amal</h3>
-            <h4>NPK -15:15:15</h4>
-            <p>Quantity - 01</p>
-        </div>
-        <div class="phone">📞</div>
-    </div>
+    .header{
+        background:url('bg.jpg') center/cover no-repeat;
+        height:180px;
+        position:relative;
+    }
 
-    <div class="card">
-        <img src="fert2.png" alt="">
-        <div class="details">
-            <h3>Nimal</h3>
-            <h4>NPK - 0:19</h4>
-            <p>Quantity - 04</p>
-        </div>
-        <div class="phone">📞</div>
-    </div>
+    .top-bar{
+        position:absolute;
+        bottom:-30px;
+        width:100%;
+        background:#f2f2f2;
+        border-radius:20px 20px 0 0;
+        padding:20px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
 
-    <div class="card">
-        <img src="fert3.png" alt="">
-        <div class="details">
-            <h3>Kalana</h3>
-            <h4>Urea - 10:5</h4>
-            <p>Quantity - 01</p>
-        </div>
-        <div class="phone">📞</div>
-    </div>
+    .top-bar h1{
+        font-size:24px;
+        font-weight:bold;
+    }
 
-    <div class="card">
-        <img src="fert4.png" alt="">
-        <div class="details">
-            <h3>Sarath</h3>
-            <h4>Organic - 12:10</h4>
-            <p>Quantity - 01</p>
-        </div>
-        <div class="phone">📞</div>
-    </div>
+    .back{
+        font-size:22px;
+    }
 
-</div>
+    .profile{
+        width:40px;
+        height:40px;
+        border-radius:50%;
+        background:#ddd;
+    }
 
-</body>
-</html>
+    .container{
+        padding:60px 15px 20px 15px;
+    }
+
+    .card{
+        background:#fff;
+        border-radius:12px;
+        padding:15px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        margin-bottom:15px;
+        box-shadow:0 3px 8px rgba(0,0,0,0.08);
+    }
+
+    .card img{
+        width:60px;
+        height:60px;
+        object-fit:contain;
+    }
+
+    .details{
+        flex:1;
+        margin-left:12px;
+    }
+
+    .details h3{
+        font-size:16px;
+        margin-bottom:4px;
+    }
+
+    .details h4{
+        font-size:14px;
+        font-weight:600;
+        margin-bottom:4px;
+    }
+
+    .details p{
+        font-size:12px;
+        color:gray;
+    }
+
+    .phone{
+        font-size:20px;
+        color:#f4b400;
+    }
+}
